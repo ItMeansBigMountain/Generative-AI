@@ -1,0 +1,31 @@
+Remove vocals
+    https://x-minus.pro/ai
+
+
+
+Google Colab code to train ai
+    https://colab.research.google.com/drive/1r4IRL0UA7JEoZ0ZK8PKfMyTIBHKpyhcw
+
+
+
+Voice ai models spread sheet
+    https://docs.google.com/spreadsheets/d/1tAUaQrEHYgRsm1Lvrnj14HFHDwJWl0Bd9x0QePewNco/edit
+
+
+
+Ai model fit and export 
+    https://rentry.co/nh2arh
+
+
+
+Ai covers 
+    https://www.covers.ai/
+
+
+Local LLM list
+    https://medium.com/geekculture/list-of-open-sourced-fine-tuned-large-language-models-llm-8d95a2e0dc76
+
+
+Clip maker
+    https://www.opus.pro/
+

@@ -1,0 +1,3 @@
+--gpu-memory 4
+--auto-devices
+--disk
