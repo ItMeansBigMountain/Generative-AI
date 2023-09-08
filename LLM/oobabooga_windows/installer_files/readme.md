@@ -1,0 +1,3 @@
+# if git cloning this repo and trying to run oobabooga fails...
+- follow directions to reinstall using one click installer from their git
+- https://github.com/oobabooga/text-generation-webui
