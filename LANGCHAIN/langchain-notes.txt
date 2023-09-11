@@ -1,0 +1,8 @@
+LANGCHAIN
+    a python package that will chunk up your data and save it into a vector database in order to interact with ChatGPT
+
+    Components ---> chains ----> agents
+
+        LLM Wrappers - LLM from huggingFace or openai
+        Indexes      - extracting relevant information form db 
+        Agents       - How the LLM interacts with exterior API'
