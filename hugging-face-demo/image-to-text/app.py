@@ -92,6 +92,6 @@ def text2Speech(story):
 
 
 # Calling functions down here
-scenario = img2Text("laughing.png")
-story = generate_story_GPT(scenario)
-text2Speech(story)
+scenario = img2Text("jasonandi.png")
+# story = generate_story_GPT(scenario)
+# text2Speech(story)

@@ -1,52 +1,21 @@
-# [HuggingFace Models](https://huggingface.co/models)
 
-- using the python `transformers` lib we can interact with HuggingFace Hub
+# DOWNLOAD AI MODELS
+- models take up a lot of space so be aware it will save in your .cache folder
 
-
-## [Tasks](https://huggingface.co/tasks)
-- Categories of AI models
+- `C:\Users\USERNAME\.cache\huggingface``
 
 
 
-# TRANSFORMERS PYTHON PYPY 
-```
-from transformers import pipeline
-
-# LOAD HUGGING FACE API
-load_dotenv(find_dotenv())
-
-# LOAD TASK AND MODEL IN PIPELINE PARAMS
-image_to_text = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base")
-
-# OUTPUT
-text = image_to_text("path-to-pic.png")[0]["generated_text"]
-print(text)
 
 
-```
 
 
-# REQUESTS PYTHON API 
-```
-import requests
-
-huggingFaceToken = os.getenv("HUGGINGFAVEHUB_API_TOKEN")
 
 
-# INIT API VARS
-API_URL = "https://api-inference.huggingface.co/models/espnet/kan-bayashi_ljspeech_vits"
-headers = {"Authorization": f"Bearer {huggingFaceToken}"}
-payload = { "inputs": story, }
 
-# POST API CALL
-response = requests.post(API_URL, headers=headers, json=payload)
-
-# SAVE RESPONSE INTO FILE
-with open("audio.flac", "wb") as file:
-    file.write(response.content)
-
-# display
-print(response.content)
-
-
-```
+Transformers: Pretrained models for NLP tasks.
+Diffusers: Diffusion models for image and audio generation.
+Datasets: Access to datasets for computer vision, audio, and NLP.
+Inference API: Free API to experiment with over 200k models.
+Tokenizers: Fast tokenizers optimized for research and production.
+Accelerate: Tools for multi-GPU, TPU, and mixed-precision training.

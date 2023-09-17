@@ -1,0 +1,6 @@
+PIPELINE FUNCTION
+    work through all steps of model usage
+
+     Pre-Processing ---> Model ---> Post-Processing
+
+
