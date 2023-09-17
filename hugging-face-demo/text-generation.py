@@ -1,9 +1,4 @@
 from transformers import pipeline
-import os
-
-# Set the cache path
-os.environ['TRANSFORMERS_CACHE'] = 'D:\\Programs'
-
 
 
 # GENERATE TEXT
