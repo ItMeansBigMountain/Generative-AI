@@ -12,5 +12,7 @@
 
 # PROCEDURE
 `O-llama runs on localhost as an api`
+- ollama run gemma3
 
-- 
+
+---

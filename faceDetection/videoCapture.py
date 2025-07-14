@@ -31,6 +31,10 @@ webcam = cv2.VideoCapture(0)
 while True:
     success_of_frame_bool, frame_pixel_arr = webcam.read()
 
+    # skip if frame not captured properly
+    if not success_of_frame_bool:
+        continue
+
     # turn test image into grayscale   (bit image & openCV grey class object option)
     black_white_test_image = cv2.cvtColor(frame_pixel_arr, cv2.COLOR_BGR2GRAY)
 
@@ -42,15 +46,16 @@ while True:
     # drawing rectangle using coordinates (ADDS RECTANGLE TO TESTING BIT IMAGE)
     for face_index in range(0, len(face_coordinates), 1):
         (x, y, w, h) = face_coordinates[face_index]
-        rect_img = cv2.rectangle(
+        cv2.rectangle(
             frame_pixel_arr, (x, y), (x+w, y+h), (0, 255, 0), thickness=5)
 
-    # display video with 1 mil-second delay before refresh capture image
-    cv2.imshow("OYAMA PRODUCTIONS", rect_img)
+    # ensure frame always exists for display
+    cv2.imshow("OYAMA PRODUCTIONS", frame_pixel_arr)
     key = cv2.waitKey(1)
-
 
     # EXIT
     if key == 81 or key == 113:
         break
+
 webcam.release()
+cv2.destroyAllWindows()
