@@ -12,7 +12,14 @@
 
 # PROCEDURE
 `O-llama runs on localhost as an api`
-- ollama run gemma3
 
+- Download (pull) A model 
+    - `ollama pull smollm2:135m`
+        - this saves to `C:\Users\faree\.ollama\models`
 
----
+- Delete a model 
+    - `ollama rm smollm2:135ms`
+    - `ollama rm --all`
+
+- List All Downloaded Models
+    - `ollama list`
