@@ -18,8 +18,27 @@
         - this saves to `C:\Users\faree\.ollama\models`
 
 - Delete a model 
-    - `ollama rm smollm2:135ms`
-    - `ollama rm --all`
+    - `ollama rm smollm2:135m`
+
+- Run a model 
+    - `ollama run smollm2:135m`
 
 - List All Downloaded Models
     - `ollama list`
+
+# API Usage
+- Start conversation:
+    ```bash
+    curl http://localhost:11434/api/chat -d '{
+        "model": "smollm2:135m",
+        "messages": [{"role": "user", "content": "Hello"}]
+    }'
+    ```
+
+- Generate completion:
+    ```bash
+    curl http://localhost:11434/api/generate -d '{
+        "model": "smollm2:135m",
+        "prompt": "Write a hello world program"
+    }'
+    ```
