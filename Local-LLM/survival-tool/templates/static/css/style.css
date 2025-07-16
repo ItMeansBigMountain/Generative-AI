@@ -1,0 +1,93 @@
+/* GameBoy-inspired color palette */
+body {
+    background-color: #1a1b0a;
+    color: #9bbc0f;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 8px solid #8b956d;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #0f380f;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9bbc0f;
+    padding-bottom: 10px;
+}
+
+#commands {
+    background-color: #306230;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #8b956d;
+    font-size: 0.9em;
+}
+
+#output {
+    background-color: #0f380f;
+    border: 2px solid #8b956d;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.user-message {
+    color: #9bbc0f;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.user-message:before {
+    content: ">";
+    position: absolute;
+    margin-left: -20px;
+}
+
+.assistant-message {
+    color: #8b956d;
+    margin-bottom: 15px;
+    border-left: 2px solid #306230;
+    padding-left: 10px;
+}
+
+#input-container {
+    display: flex;
+    gap: 10px;
+}
+
+#input {
+    flex-grow: 1;
+    background-color: #306230;
+    color: #9bbc0f;
+    border: 2px solid #8b956d;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+#send {
+    background-color: #8b956d;
+    color: #0f380f;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+#send:hover {
+    background-color: #9bbc0f;
+}

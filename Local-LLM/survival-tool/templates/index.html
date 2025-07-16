@@ -2,90 +2,26 @@
 <html>
 <head>
     <title>Survival Assistant</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #0f0;
-            font-family: monospace;
-            margin: 0;
-            padding: 20px;
-            height: 100vh;
-            box-sizing: border-box;
-        }
-        #container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        #output {
-            background-color: #111;
-            border: 1px solid #0f0;
-            padding: 10px;
-            height: 300px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-            white-space: pre-wrap;
-        }
-        #input {
-            width: 100%;
-            background-color: #111;
-            color: #0f0;
-            border: 1px solid #0f0;
-            padding: 10px;
-            margin-bottom: 10px;
-            font-family: monospace;
-        }
-        #send {
-            background-color: #0f0;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-family: monospace;
-        }
-    </style>
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
     <div id="container">
-        <h1>Survival Assistant</h1>
+        <div id="header">
+            <h1>SURVIVAL ASSISTANT v1.0</h1>
+        </div>
+        <div id="commands">
+            Available Commands:
+            /help - Show all commands
+            /reset - Reset conversation
+            /clear - Clear screen
+            /status - Show system status
+        </div>
         <div id="output"></div>
-        <input type="text" id="input" placeholder="Enter your query...">
-        <button id="send">Send</button>
+        <div id="input-container">
+            <input type="text" id="input" placeholder="Type your message or command...">
+            <button id="send">SEND</button>
+        </div>
     </div>
-
-    <script>
-        const output = document.getElementById('output');
-        const input = document.getElementById('input');
-        const send = document.getElementById('send');
-
-        function addToOutput(text, isUser = false) {
-            output.innerHTML += `${isUser ? '> ' : ''}${text}\n`;
-            output.scrollTop = output.scrollHeight;
-        }
-
-        async function sendQuery() {
-            const query = input.value.trim();
-            if (!query) return;
-
-            addToOutput(query, true);
-            input.value = '';
-
-            try {
-                const response = await fetch('/query', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({prompt: query})
-                });
-                const data = await response.json();
-                addToOutput(data.response);
-            } catch (error) {
-                addToOutput('Error: ' + error);
-            }
-        }
-
-        send.addEventListener('click', sendQuery);
-        input.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendQuery();
-        });
-    </script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

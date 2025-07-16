@@ -9,6 +9,13 @@
     - Model files you can import 
 
 ---
+# Uncensored LLM Leaderboards
+
+- You can check more uncensored models on these leaderboards
+    - https://huggingface.co/spaces/beepbeepbruh/UGI-Leaderboard
+    - https://huggingface.co/spaces/DontPlanToEnd/UGI-Leaderboard
+
+---
 
 # PROCEDURE
 `O-llama runs on localhost as an api`
@@ -26,6 +33,7 @@
 - List All Downloaded Models
     - `ollama list`
 
+---
 # API Usage
 - Start conversation:
     ```bash

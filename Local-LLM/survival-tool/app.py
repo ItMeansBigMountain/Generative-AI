@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, url_for
 from modules.llm_interface import LLMInterface
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='templates/static')
 llm = LLMInterface()
 
 @app.route('/')
