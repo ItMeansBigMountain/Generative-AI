@@ -27,3 +27,9 @@ A portable, Raspberry Pi-based AI assistant for survival/camping situations
 - Interface via Python/Flask
 - Custom model training for survival focus
 - Power optimization required
+
+## Next Steps
+- Experiment with different models
+- Build a basic UI
+- Create custom knowledge base
+- Optimize for specific use cases
