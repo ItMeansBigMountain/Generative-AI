@@ -1,0 +1,59 @@
+NOTES
+    Use role + context + task + output format
+
+
+
+TYPES OF PROMPTS 
+    Zero-Shot
+        - simple direct question without direction
+        - An example of this is idea generation, where the model is prompted to generate creative ideas or brainstorming solutions. Another example is summarization, or translation, where the model is asked to summarize or translate some piece of content.
+    
+    One-, few- and multi-shot prompts
+        - showing examples of what you want the output to look like 
+        - You show the AI some examples
+        - Then you ask it to do a similar task
+        - The more examples you give, the better it understands the pattern
+
+    Chain of Thought Prompts
+        - making the ai break down the task into steps 
+        - "think through this step by step"
+
+    Self-Consistency Prompting	
+        - Ask the model the same question multiple times, then pick the most common correct answer.
+        - rerunning the prompt 5-10 times to get the best answer 
+    
+    ReAct Prompting
+        - Let the model think, then do something (like call a search or calculator), then continue.
+        - example: 
+            Question: What’s the current weather in Tokyo?
+            Thought: I need to look up real-time weather.
+            Action: Search["current weather Tokyo"]
+            Observation: It’s 31°C and sunny.
+            Final Answer: It's 31°C and sunny in Tokyo.
+
+    Prompt Templates
+        - Pre-written prompts with blanks to reuse for different inputs.
+        - example:
+            Extract the {info_type} from this sentence {input_sentence}:
+
+    Instruction vs Completion
+        - starting the ai out with something and allowing it to finish 
+            - Instruction = Tell the model exactly what to do
+            - Completion = Give the start of something and let it finish
+        - example: 
+            Summarize the following in one sentence:
+            "The Industrial Revolution changed how goods were produced..."
+
+
+Strategies for writing better prompts
+    - Use action verbs to specify the desired action
+    - Define the desired length of output
+    - specify target audience 
+    - include relevant data 
+    - reference specific sources 
+    - provide output examples 
+    - define desired tone
+    - provide desired level of detail
+    - Encourage step-by-step reasoning
+    - ask the model to explain its reasoning process 
+    - 

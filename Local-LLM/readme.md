@@ -4,25 +4,20 @@
 ## download ollama here 
 - https://ollama.com/
 
-### Local Model Catalog
-- https://ollama.com/search
-    - Model files you can import 
+## Model Resources
+### Uncensored Model Leaderboards
+- [UGI Leaderboard](https://huggingface.co/spaces/beepbeepbruh/UGI-Leaderboard)
+- [Alternative UGI Leaderboard](https://huggingface.co/spaces/DontPlanToEnd/UGI-Leaderboard)
+- [Local Model Catalog](https://ollama.com/search)
 
----
-# Uncensored LLM Leaderboards
-
-- You can check more uncensored models on these leaderboards
-    - https://huggingface.co/spaces/beepbeepbruh/UGI-Leaderboard
-    - https://huggingface.co/spaces/DontPlanToEnd/UGI-Leaderboard
-
----
+--- 
 
 # PROCEDURE
 `O-llama runs on localhost as an api`
 
 - Download (pull) A model 
     - `ollama pull smollm2:135m`
-        - this saves to `C:\Users\faree\.ollama\models`
+        - this saves to `C:\Users\username\.ollama\models`
 
 - Delete a model 
     - `ollama rm smollm2:135m`
@@ -50,3 +45,27 @@
         "prompt": "Write a hello world program"
     }'
     ```
+
+---
+
+# Fine-Tuning An LLM 
+> Note: Fine-tuning adapts an existing model's behavior without modifying its core understanding.
+`There are different teqniques to train an LLM`
+
+1. **LoRA (Low-Rank Adaptation)**
+   - Efficient fine-tuning for large models
+   - Reduces memory requirements
+   - Faster training times
+
+2. **QLoRA (Quantized LoRA)**
+   - Further memory optimization
+   - Maintains model quality
+   - Suitable for consumer hardware
+
+3. **FlashAttention**
+   - Improves attention mechanism efficiency
+   - Reduces memory usage
+   - Faster training and inference
+
+---
+
